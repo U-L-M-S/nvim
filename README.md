@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Neovim from scratch
 
 My Personal nvim config. It's a mix from [ChrisAtMachine](https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA) and [Neil Sabde](https://www.youtube.com/channel/UCIfWXqdiEvM8nBFAA594Kjw)
@@ -7,7 +6,7 @@ My Personal nvim config. It's a mix from [ChrisAtMachine](https://www.youtube.co
 
 Make sure to remove or move your current `nvim` directory
 
-**IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
+**IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or higher. 
 ```
 git clone https://github.com/U-L-M-S/nvim.git ~/.config/nvim
 ```
@@ -30,7 +29,6 @@ So let's fix that
 
 First we'll fix copy/paste
 
-- On mac `pbcopy` should be builtin
 
 - On Ubuntu
 
@@ -65,4 +63,3 @@ Next we need to install python support (node is optional)
 =======
 # nvim
 my personal nvim. A personal mix of  ChrisAtMachine and Neil Sabde
->>>>>>> 8ac38747c24198d88d88336500036c9c6d0d5844
