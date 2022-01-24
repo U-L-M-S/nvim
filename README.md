@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Neovim from scratch
 
 My Personal nvim config. It's a mix from [ChrisAtMachine](https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA) and [Neil Sabde](https://www.youtube.com/channel/UCIfWXqdiEvM8nBFAA594Kjw)
@@ -61,3 +62,7 @@ Next we need to install python support (node is optional)
 **NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
 
 
+=======
+# nvim
+my personal nvim. A personal mix of  ChrisAtMachine and Neil Sabde
+>>>>>>> 8ac38747c24198d88d88336500036c9c6d0d5844
