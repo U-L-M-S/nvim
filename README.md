@@ -1,6 +1,6 @@
 # Neovim from scratch
 
-Each video will be associated with a branch so checkout the one you are interested in, you can follow along with this [playlist](https://www.youtube.com/watch?v=ctH-a-1eUME&list=PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ).
+My Personal nvim config. It's a mix from [ChrisAtMachine](https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA) and [Neil Sabde](https://www.youtube.com/channel/UCIfWXqdiEvM8nBFAA594Kjw)
 
 ## Try out this config
 
@@ -8,7 +8,7 @@ Make sure to remove or move your current `nvim` directory
 
 **IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or [Nightly](https://github.com/neovim/neovim/releases/tag/nightly). 
 ```
-git clone https://github.com/LunarVim/Neovim-from-scratch.git ~/.config/nvim
+git clone https://github.com/U-L-M-S/nvim.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
@@ -60,6 +60,4 @@ Next we need to install python support (node is optional)
 
 **NOTE** make sure you have [node](https://nodejs.org/en/) installed, I recommend a node manager like [fnm](https://github.com/Schniz/fnm).
 
-> The computing scientist's main challenge is not to get confused by the complexities of his own making. 
 
-\- Edsger W. Dijkstra
