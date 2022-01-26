@@ -28,6 +28,11 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
+" To run C/C++ inside nvim
+  map <F4> :w <CR> :!gcc % -o %< && ./%< <CR>
+" To run python inside nvim
+  autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+  autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 ]]
 
 -- Autoformat
