@@ -72,3 +72,21 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Renamer
 --vim.api.nvim_set_keymap("i", "<leader>5", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
 --vim.api.nvim_set_keymap("n", "<leader>5", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
+
+local modes = {
+  normal = "n",
+  insert = "i",
+  visual = "v",
+  visual_block = "x",
+  -- add more mode here if you want
+}
+local opts = { noremap = true, silent = true }
+
+function set_keymap(keys)
+  for mode, map in pairs(keys) do
+      local key_mode = modes[mode]
+      for key, value in pairs(map) do
+        vim.api.nvim_set_keymap(key_mode, key, value, opts)
+      end
+  end
+end
