@@ -11,6 +11,7 @@ mv ~/.config/nvim ~/.config/nvim_old
 ```
 
 **IMPORTANT** Requires [Neovim v0.6.0](https://github.com/neovim/neovim) or higher.
+
 **!!! If you do NOT install `Neovim v0.6` or higher a serie of mistakes will happen !!!**
 ```
 git clone https://github.com/U-L-M-S/nvim.git ~/.config/nvim
