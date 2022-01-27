@@ -5,12 +5,25 @@ end
 
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
-	[[                               __                ]],
-	[[  ___     ___    ___   __  __ /\_\    ___ ___    ]],
-	[[ / _ `\  / __`\ / __`\/\ \/\ \\/\ \  / __` __`\  ]],
-	[[/\ \/\ \/\  __//\ \_\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-	[[\ \_\ \_\ \____\ \____/\ \___/  \ \_\ \_\ \_\ \_\]],
-	[[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
+
+[[             ..ooo@@@XXX%%%xx..]],
+[[        .oo@@XXX%x%xxx..     ` .]],
+[[        .o@XX%%xx..               ` .]],
+[[      o@X%..                  ..ooooooo]],
+[[    .@X%x.                 ..o@@^^   ^^@@o]],
+[[  .ooo@@@@@@ooo..      ..o@@^          @X%]],
+[[  o@@^^^     ^^^@@@ooo.oo@@^             %]],
+[[ xzI    -*--      ^^^o^^        --*-     %]],
+[[ @@@o     ooooooo^@@^o^@X^@oooooo     .X%x]],
+[[I@@@@@@@@@XX%%xx  ( o@o )X%x@ROMBASED@@@X%x]],
+[[I@@@@XX%%xx  oo@@@@X% @@X%x   ^^^@@@@@@@X%x]],
+[[ @X%xx     o@@@@@@@X% @@XX%%x  )    ^^@X%x]],
+[[  ^   xx o@@@@@@@@Xx  ^ @XX%%x    xxx]],
+[[        o@@^^^ooo I^^ I^o ooo   .  x]],
+[[        oo @^ IX      I   ^X  @^ oo]],
+[[        IX     U  .        V     IX]],
+[[         V     .           .     V]],
+
 }
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":Telescope find_files <CR>"),
@@ -28,7 +41,7 @@ local function footer()
 	-- local fortune = handle:read("*a")
 	-- handle:close()
 	-- return fortune
-	return "chrisatmachine.com"
+	return "Torva Messor"
 end
 
 dashboard.section.footer.val = footer()
