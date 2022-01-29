@@ -61,14 +61,19 @@ return packer.startup(function(use)
   use "andweeb/presence.nvim"
   use "ethanholz/nvim-lastplace"
 --For renamer
- use {
-  "filipdutescu/renamer.nvim",
-   requires = { "nvim-lua/plenary.nvim" },
- config = function()
-     require("user/rename").setup()
- end,
- }
-use "nathom/easy-replace.nvim"
+ -- use {
+ --  "filipdutescu/renamer.nvim",
+ --   requires = { "nvim-lua/plenary.nvim" },
+ -- config = function()
+ --     require("user/rename").setup()
+ -- end,
+ -- }
+use {
+  'filipdutescu/renamer.nvim',
+  branch = 'master',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
+-- use "nathom/easy-replace.nvim"
 
 
 

@@ -73,9 +73,15 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 --vim.api.nvim_set_keymap("i", "<leader>5", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
 --vim.api.nvim_set_keymap("n", "<leader>5", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
 
---vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
---vim.api.nvim_set_keymap("n", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap("n", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
+-- vim.api.nvim_set_keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- vim.api.nvim_set_keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
 
+
+  vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
+  vim.api.nvim_set_keymap("n", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
 --easy_repalce
 --keymap("n", "<F2>", '<cmd>lua require("easy_repalce").replace_selection()<cr>', {noremap = true, silent = true}))
 --keymap("i", "<F2>", '<cmd>lua require("easy_repalce").replace_selection()<cr>', {noremap = true, silent = true}))
