@@ -4,7 +4,7 @@ My Personal nvim config. It's a mix from [ChrisAtMachine](https://www.youtube.co
 
 ## Try out this config
 
-Make sure to remove or move your current `nvim` directory
+Make sure to backup your current `nvim` directory
 
 ```
 mv ~/.config/nvim ~/.config/nvim_old
