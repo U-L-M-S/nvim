@@ -1,13 +1,12 @@
 -- VSCode like renamer (https://github.com/filipdutescu/renamer.nvim)
-local M = {}
+local RE = {}
 
-M.setup = function()
+RE.setup = function()
   local status_ok, renamer = pcall(require, "renamer")
   if not status_ok then return end
 
-vim.api.nvim_set_keymap("n", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
-vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
-  --vim.api.nvim_set_keymap("n", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
+  vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
+  vim.api.nvim_set_keymap("n", "<F2>", '<cmd>lua require("renamer").rename()<cr>', {noremap = true, silent = true})
   local mappings_utils = require "renamer.mappings.utils"
   renamer.setup {
     -- The popup title, shown if `border` is true
@@ -36,4 +35,4 @@ vim.api.nvim_set_keymap("i", "<F2>", '<cmd>lua require("renamer").rename()<cr>',
   }
 end
 
-return M
+return RE
