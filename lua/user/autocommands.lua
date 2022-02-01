@@ -30,7 +30,7 @@ vim.cmd [[
   augroup end
 
 "To run C/C++ inside nvim
-  map <F4> :w <CR> :!gcc % -o %< && ./%< <CR>
+map <F4> :w <CR> :!gcc % -o .%< && ./.%< && rm .%< <CR>
   "imap <F4> :w <CR> :!gcc % -o %< && ./%< <CR>
 "To run python inside nvim
   autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
