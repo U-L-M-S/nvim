@@ -88,6 +88,18 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 
 -- vim.api.nvim_set_keymap('n', '<F3>', ':lua require("replacer").run()<cr>', { silent = true })
+--
+-- keymap('i', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- keymap('n', '<F2>', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- keymap('n', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+-- keymap('v', '<leader>rn', '<cmd>lua require("renamer").rename()<cr>', { noremap = true, silent = true })
+--
+
+-- LSP Rename
+-- notes for the future: Create a mini plugin. usinh Quickipeek (https://www.youtube.com/watch?v=1AOhfnokacE) 
+-- to create a mini window for the user input to rename a variable (LSP.rename + Quickpeek)
+keymap('i', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', {noremap = true, silent = true})
+keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', {noremap = true, silent = true})
 
 
 local modes = {

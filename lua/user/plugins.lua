@@ -68,11 +68,8 @@ return packer.startup(function(use)
  --     require("user/rename").setup()
  -- end,
  -- }
-use {
-  'filipdutescu/renamer.nvim',
-  branch = 'master',
-  requires = { {'nvim-lua/plenary.nvim'} }
-}
+use "filipdutescu/renamer.nvim"
+
 -- use "nathom/easy-replace.nvim"
 
 
