@@ -1,17 +1,21 @@
+require('plugins')
 require('settings')
 require('packer-config')
 require('colorschemes-config.carbonfox')
 require('nvim-tree-config')
 require('mappings')
-local use = require('packer').use
-require('packer').startup(function()
-  use 'wbthomason/packer.nvim' -- Package manager
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
-end)
-require('lsp-config.nvim-cmp')
-require'lspconfig'.pyright.setup{}
 
-
-
-
-
+--[[ require('lsp-config.null-ls') ]]
+--require('lsp-config.language-servers')
+require('lualine-config')
+require('barbar-config')
+require('treesitter-config')
+--require('mason-config') ]]
+require('autopairs-config')
+require('colorizer-config')
+require('indent-blankline-config')
+require('comment-config')
+require('startup-config')
+require('toggleterm-config')
+require('truezen-config')
+require('cmp-config')
