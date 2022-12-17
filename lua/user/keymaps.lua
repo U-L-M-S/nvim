@@ -44,12 +44,6 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 
--- TELESCOPE MAPPINGS --
-map('n', '<Space>ff', '<Cmd>Telescope find_files<CR>', opts)
-map('n', '<Space>fg', '<Cmd>Telescope live_grep<CR>', opts)
-map('n', '<Space>fc', '<Cmd>Telescope git_bcommits<CR>', opts)
-
-
 -- Visual Block --
 -- Move text up and down
 map("x", "J", ":move '>+1<CR>gv-gv", opts)
@@ -57,11 +51,4 @@ map("x", "K", ":move '<-2<CR>gv-gv", opts)
 map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
 map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 

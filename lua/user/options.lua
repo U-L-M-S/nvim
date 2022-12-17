@@ -3,7 +3,7 @@ local options = {
   clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
   cmdheight = 2,                           -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp
-  conceallevel = 0,                        -- so that `` is visible in markdown files
+  conceallevel = 1,                        -- so that `` is visible in markdown files
   fileencoding = "utf-8",                  -- the encoding written to a file
   hlsearch = true,                         -- highlight all matches on previous search pattern
   ignorecase = true,                       -- ignore case in search patterns
@@ -36,12 +36,22 @@ local options = {
   sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
   guifont = "monospace:h17",               -- the font used in graphical neovim applications
   whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
-
+  
 }
 
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
+
+-- vimtex config
+-- Set Zathura to view LaTex files
+vim.g.vimtex_view_method = "zathura"
+-- Change the localleader. Default = "\" 
+-- vim.g.maplocalleader = ","
+vim.g.tex_flavor='latex'
+vim.g.vimtex_quickfix_mode=0
+vim.g.tex_conceal='abdmg'
+
 
 -- vim.opt.shortmess = "ilmnrx"                        -- flags to shorten vim messages, see :help 'shortmess'
 vim.opt.shortmess:append "c"                           -- don't give |ins-completion-menu| messages
@@ -61,4 +71,5 @@ vim.api.nvim_create_autocmd({ "BufReadPost" }, {
         vim.api.nvim_exec('silent! normal! g`"zv', false)
     end,
 })
+
 

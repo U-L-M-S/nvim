@@ -83,7 +83,6 @@ return packer.startup(function(use)
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
-
 	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -106,12 +105,46 @@ return packer.startup(function(use)
 
 	-- Renamer
 	use({
-		"filipdutescu/renamer.nvim", branch = "master", requires = { { "nvim-lua/plenary.nvim" } },
+		"filipdutescu/renamer.nvim",
+		branch = "master",
+		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
-  -- Notify
-  use({ "rcarriga/nvim-notify" })
+	-- Notify
+	use({ "rcarriga/nvim-notify" })
 
+	-- Scrollbar
+	use({ "petertriho/nvim-scrollbar" })
+
+	--Hlslens. I't a plugins nescessery for scrollbar
+	use({
+		"kevinhwang91/nvim-hlslens",
+		config = function()
+			-- require('hlslens').setup() is not required
+			require("scrollbar.handlers.search").setup({
+				-- hlslens config overrides
+				override_lens = function() end,
+			})
+		end,
+	})
+
+	-- Vimtex. Plugin needed to write in LaTex
+	use({ "lervag/vimtex" })
+
+	-- ChatGPT
+	use({
+		"jackMort/ChatGPT.nvim",
+		config = function()
+			require("chatgpt").setup({
+				-- optional configuration
+			})
+		end,
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
