@@ -11,12 +11,9 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }), -- HTML/CSS/JS/TypeScript/CSS 
-		formatting.black.with({ extra_args = { "--fast" } }), --Python
-		formatting.stylua,  -- Lua
-		formatting.clang_format, -- C / CPP
-    --diagnostics.checkstyle.with({ extra_args = { "-c", "/google_checks.xml" }, }), -- Java
-    formatting.google_java_format, --Java. checkstyle isnt working (I PROBABLY don't know how to set it up)
-		diagnostics.chktex, -- LaTex
+		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.black.with({ extra_args = { "--fast" } }),
+		formatting.stylua,
+    -- diagnostics.flake8
 	},
 })

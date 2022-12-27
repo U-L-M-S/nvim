@@ -1,4 +1,4 @@
-vim.cmd [[
+vim.cmd([[
   augroup _general_settings
     autocmd!
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR> 
@@ -28,23 +28,13 @@ vim.cmd [[
     autocmd!
     autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
   augroup end
-]]
 
+  augroup flog
+    autocmd FileType floggraph nno <buffer> dd :<C-U>call flog#run_tmp_command('vertical belowright Git diff HEAD %h')<CR>
+    autocmd FileType floggraph vno <buffer> dd :<C-U>call flog#run_tmp_command("vertical belowright Git diff %(h'>) %(h'<)")<CR>
+  augroup end 
 
-
-vim.cmd [[
-	augroup run_file
-		autocmd BufEnter *.java let @g=":w\<CR>:vsp | terminal java %\<CR>i"
-		autocmd BufEnter *.py let @g=":w\<CR>:vsp |terminal python %\<CR>i"
-		autocmd BufEnter *.asm let @g=":w\<CR> :!nasm -f elf64 -o out.o % && ld out.o -o a.out \<CR> | :vsp |terminal ./a.out\<CR>i"
-		autocmd BufEnter *.cpp let @g=":w\<CR> :!g++ -std=c++17 -O3 %\<CR> | :vsp |terminal ./a.out\<CR>i"
-		autocmd BufEnter *.c let @g=":w\<CR> :!gcc -O3 -std=gnu99 -Wno-deprecated-declarations -pedantic -Wall -Wextra %\<CR> | :vsp |terminal ./a.out\<CR>i"
-		autocmd BufEnter *.go let @g=":w\<CR> :vsp | terminal go run % \<CR>i"
-		autocmd BufEnter *.js let @g=":w\<CR> :vsp | terminal node % \<CR>i"
-		autocmd BufEnter *.html let @g=":w\<CR> :silent !firefox % \<CR>"
-	augroup end
-]]
-
+]])
 
 -- Autoformat
 -- augroup _lsp

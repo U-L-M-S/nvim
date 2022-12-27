@@ -129,7 +129,7 @@ return packer.startup(function(use)
 	})
 
 	-- Vimtex. Plugin needed to write in LaTex
-	use({ "lervag/vimtex" })
+	-- use({ "lervag/vimtex" })
 
 	-- ChatGPT
 	use({
@@ -145,6 +145,30 @@ return packer.startup(function(use)
 			"nvim-telescope/telescope.nvim",
 		},
 	})
+
+-- surround
+--   use({
+--     "kylechui/nvim-surround",
+--     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+--     config = function()
+--         require("nvim-surround").setup({
+--             -- Configuration here, or leave empty to use defaults
+--         })
+--     end
+-- })
+
+  -- Auto-pairs
+  -- use({ "jiangmiao/auto-pairs" })
+
+  --vim-closetag
+  use({ "alvan/vim-closetag" })
+  
+  -- Fugitive (only needed because of the plugin vim-flog)
+  use({ "tpope/vim-fugitive" })
+
+  -- Vim-flog 
+  use({ "rbong/vim-flog" })
+
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
